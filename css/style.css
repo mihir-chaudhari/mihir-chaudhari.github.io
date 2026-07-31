@@ -1119,6 +1119,7 @@ button {
   font-size: 0.82rem;
   color: var(--text-muted);
   transition: background var(--transition), color var(--transition), transform var(--transition);
+  cursor: pointer;
 }
 
 .skill-card i {

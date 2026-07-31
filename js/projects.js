@@ -45,7 +45,7 @@
       features: [
         'Policy details and premium payment management',
         'Profile updates and service request handling',
-        'Modernized backend modules with Java 21 migration',
+        'Converting each backend service to Java 21 for the customer portal revamp',
         'Improved performance, maintainability, and code quality',
         'AI-assisted migration support using Claude Opus and Claude Sonnet'
       ],
