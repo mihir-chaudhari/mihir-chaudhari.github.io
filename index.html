@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mihir Chaudhari — Java Backend Engineer specializing in Spring Boot microservices, REST APIs, AWS, and OpenShift for enterprise insurance systems.">
+  <meta name="keywords" content="Mihir Chaudhari, Java Backend Engineer, Spring Boot, Microservices, AWS, OpenShift, Pune">
+  <meta name="author" content="Mihir Chaudhari">
+  <meta property="og:title" content="Mihir Chaudhari | Java Backend Engineer">
+  <meta property="og:description" content="Enterprise Java Backend Engineer building scalable microservices and cloud-native applications.">
+  <meta property="og:type" content="website">
+  <title>Mihir Chaudhari | Java Backend Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Deployment testing -->
+  <!-- Loading Screen -->
+  <div id="loader" class="loader" aria-hidden="true">
+      <div class="loader__inner">
+      <div class="loader__logo">
+        <!-- Inline SVG </> with gradient stroke and subtle animations -->
+        <svg class="loader__svg" viewBox="0 0 64 64" role="img" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="loaderGrad" x1="0%" x2="100%">
+              <stop offset="0%" stop-color="#2563EB" />
+              <stop offset="60%" stop-color="#7C3AED" />
+              <stop offset="100%" stop-color="#00E5FF" />
+            </linearGradient>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- Left chevron -->
+          <path class="loader-path loader-left" d="M22 20 L10 32 L22 44" fill="none" stroke="url(#loaderGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+
+          <!-- Slash -->
+          <path class="loader-path loader-slash" d="M30 18 L40 46" fill="none" stroke="url(#loaderGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+
+          <!-- Right chevron -->
+          <path class="loader-path loader-right" d="M42 20 L54 32 L42 44" fill="none" stroke="url(#loaderGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+        </svg>
+      </div>
+      <div class="loader__bar"><span></span></div>
+      <p class="loader__text">Initializing systems</p>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Mouse Spotlight -->
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__container container" aria-label="Main navigation">
+      <a href="#home" class="navbar__logo" aria-label="Mihir Chaudhari — Home">
+        <span class="navbar__logo-text">Mihir<span class="text-accent">.</span></span>
+      </a>
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#architecture" class="nav-link" data-section="architecture">Architecture</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="home" class="hero section">
+      <div id="particles-js" class="hero__particles" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__gradient" aria-hidden="true"></div>
+      <div class="hero__shapes" aria-hidden="true">
+        <div class="shape shape--1"></div>
+        <div class="shape shape--2"></div>
+        <div class="shape shape--3"></div>
+      </div>
+
+      <div class="container hero__container">
+        <div class="hero__content" data-aos="fade-right" data-aos-duration="800">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__title">Mihir Chaudhari</h1>
+          <p class="hero__role"><span id="typing-text" aria-live="polite"></span><span class="typing-cursor">|</span></p>
+          <p class="hero__location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Pune, Maharashtra, India</p>
+          <div class="hero__actions">
+            <a href="assets/resume.pdf" class="btn btn--primary" download>
+              <span>Download Resume</span>
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+            <a href="#projects" class="btn btn--outline">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="hero__social">
+            <a href="https://github.com/mihir-31" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mihir-chaudhari-6063b720a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:mihir.chaudharii@outlook.com" aria-label="Send email">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+          <div class="hero__orbit" aria-hidden="true">
+            <div class="orbit-icon orbit-icon--1" title="Java"><i class="fa-brands fa-java"></i></div>
+            <div class="orbit-icon orbit-icon--2" title="Spring Boot"><i class="fa-solid fa-leaf"></i></div>
+            <div class="orbit-icon orbit-icon--3" title="AWS"><i class="fa-brands fa-aws"></i></div>
+            <div class="orbit-icon orbit-icon--4" title="Docker"><i class="fa-brands fa-docker"></i></div>
+            <div class="orbit-icon orbit-icon--5" title="Database"><i class="fa-solid fa-database"></i></div>
+            <div class="orbit-icon orbit-icon--6" title="Git"><i class="fa-brands fa-git-alt"></i></div>
+          </div>
+          <div class="hero__photo-wrapper">
+            <!-- Glass panel behind the profile to create depth -->
+            <div class="hero__photo-bg" aria-hidden="true"></div>
+
+            <!-- Profile image (kept same src and alt) -->
+            <img src="assets/images/profile.png" alt="Mihir Chaudhari — Java Backend Engineer" class="hero__photo" loading="eager" width="400" height="400">
+
+            <!-- Gradient ring that adds premium glow -->
+            <div class="hero__photo-ring" aria-hidden="true"></div>
+
+            <!-- Decorative overlays (dots/lines) to blend with background theme -->
+            <div class="hero__photo-decor" aria-hidden="true"></div>
+          </div>
+          <div class="code-editor" aria-label="Animated Java code snippet">
+            <div class="code-editor__header">
+              <span class="code-editor__dot code-editor__dot--red"></span>
+              <span class="code-editor__dot code-editor__dot--yellow"></span>
+              <span class="code-editor__dot code-editor__dot--green"></span>
+              <span class="code-editor__filename">PolicyService.java</span>
+            </div>
+            <pre class="code-editor__body"><code id="code-animation"></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Spring Boot</span><span>Java 8</span><span>Microservices</span><span>REST APIs</span>
+          <span>AWS</span><span>OpenShift</span><span>Oracle</span><span>PostgreSQL</span>
+          <span>Jenkins</span><span>CI/CD</span><span>Angular</span><span>PL/SQL</span>
+          <span>Spring Boot</span><span>Java 8</span><span>Microservices</span><span>REST APIs</span>
+          <span>AWS</span><span>OpenShift</span><span>Oracle</span><span>PostgreSQL</span>
+          <span>Jenkins</span><span>CI/CD</span><span>Angular</span><span>PL/SQL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">About</span>
+          <h2 class="section-title">Building Enterprise-Grade<br><span class="text-gradient">Backend Systems</span></h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__image" data-aos="fade-right" data-aos-duration="700">
+            <img src="assets/images/profile.png" alt="Mihir Chaudhari professional photo" loading="lazy" width="360" height="360">
+            <div class="about__image-border"></div>
+          </div>
+          <div class="about__content" data-aos="fade-left" data-aos-duration="700">
+            <h3 class="about__headline">Java Backend Engineer | Spring Boot &amp; Microservices</h3>
+            <p class="about__sub">3+ Years of Experience · Pune, India</p>
+            <div class="about__summary glass-card">
+              <p>Java Full Stack Engineer with hands-on experience architecting and deploying Spring Boot microservices, RESTful APIs, and cloud-native applications for enterprise insurance systems. Skilled in performance optimization, root-cause debugging, CI/CD automation, and container deployment on AWS and Red Hat OpenShift.</p>
+              <p>Uses AI-assisted tools, including Claude (Opus, Sonnet) and GitHub Copilot, for code generation and debugging. Delivered measurable outcomes: 25% faster process throughput, 30% reduction in downtime, and 25% faster query execution.</p>
+            </div>
+            <a href="assets/resume.pdf" class="btn btn--primary" download>
+              <span>Download CV</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="about__stats" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-card">
+            <span class="stat-card__number" data-count="3" data-suffix="+">0</span>
+            <span class="stat-card__label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number" data-count="3" data-suffix="">0</span>
+            <span class="stat-card__label">Enterprise Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number" data-count="99.9" data-suffix="%" data-decimal="1">0</span>
+            <span class="stat-card__label">System Uptime</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number" data-count="8.15" data-suffix="" data-decimal="2">0</span>
+            <span class="stat-card__label">CGPA (B.E. CSE)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Skills</span>
+          <h2 class="section-title">Technical <span class="text-gradient">Expertise</span></h2>
+          <p class="section-subtitle">Core technologies powering enterprise insurance and logistics platforms</p>
+        </div>
+        <div class="skills__grid">
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="0">
+            <div class="skill-group__header">
+              <i class="fa-solid fa-server" aria-hidden="true"></i>
+              <h3>Backend</h3>
+            </div>
+            <div class="skill-group__cards">
+              <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java 8</span></div>
+              <div class="skill-card"><i class="fa-solid fa-leaf"></i><span>Spring Boot</span></div>
+              <div class="skill-card"><i class="fa-solid fa-code"></i><span>Spring MVC</span></div>
+              <div class="skill-card"><i class="fa-solid fa-plug"></i><span>REST APIs</span></div>
+              <div class="skill-card"><i class="fa-solid fa-cubes"></i><span>Microservices</span></div>
+              <div class="skill-card"><i class="fa-solid fa-sitemap"></i><span>OOP Design</span></div>
+            </div>
+          </div>
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-group__header">
+              <i class="fa-solid fa-database" aria-hidden="true"></i>
+              <h3>Database</h3>
+            </div>
+            <div class="skill-group__cards">
+              <div class="skill-card"><i class="fa-solid fa-database"></i><span>PostgreSQL</span></div>
+              <div class="skill-card"><i class="fa-solid fa-database"></i><span>Oracle</span></div>
+              <div class="skill-card"><i class="fa-solid fa-table"></i><span>PL/SQL</span></div>
+              <div class="skill-card"><i class="fa-solid fa-server"></i><span>RDBMS/SQL</span></div>
+            </div>
+          </div>
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-group__header">
+              <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+              <h3>Cloud</h3>
+            </div>
+            <div class="skill-group__cards">
+              <div class="skill-card"><i class="fa-brands fa-aws"></i><span>AWS EC2</span></div>
+              <div class="skill-card"><i class="fa-brands fa-aws"></i><span>AWS S3</span></div>
+              <div class="skill-card"><i class="fa-brands fa-aws"></i><span>AWS Lambda</span></div>
+            </div>
+          </div>
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-group__header">
+              <i class="fa-solid fa-gears" aria-hidden="true"></i>
+              <h3>DevOps</h3>
+            </div>
+            <div class="skill-group__cards">
+              <div class="skill-card"><i class="fa-brands fa-redhat"></i><span>OpenShift</span></div>
+              <div class="skill-card"><i class="fa-solid fa-rotate"></i><span>Jenkins</span></div>
+              <div class="skill-card"><i class="fa-brands fa-github"></i><span>Git/GitHub</span></div>
+              <div class="skill-card"><i class="fa-solid fa-box"></i><span>Maven</span></div>
+              <div class="skill-card"><i class="fa-solid fa-arrows-rotate"></i><span>CI/CD</span></div>
+            </div>
+          </div>
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-group__header">
+              <i class="fa-solid fa-display" aria-hidden="true"></i>
+              <h3>Frontend</h3>
+            </div>
+            <div class="skill-group__cards">
+              <div class="skill-card"><i class="fa-brands fa-angular"></i><span>Angular</span></div>
+            </div>
+          </div>
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="500">
+            <div class="skill-group__header">
+              <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
+              <h3>Tools &amp; Practices</h3>
+            </div>
+            <div class="skill-group__cards">
+              <div class="skill-card"><i class="fa-solid fa-robot"></i><span>GitHub Copilot</span></div>
+              <div class="skill-card"><i class="fa-solid fa-brain"></i><span>Claude AI</span></div>
+              <div class="skill-card"><i class="fa-solid fa-people-group"></i><span>Agile/Scrum</span></div>
+              <div class="skill-card"><i class="fa-solid fa-gauge-high"></i><span>Performance Tuning</span></div>
+              <div class="skill-card"><i class="fa-solid fa-code-pull-request"></i><span>Code Review</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="experience section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Experience</span>
+          <h2 class="section-title">Professional <span class="text-gradient">Journey</span></h2>
+        </div>
+        <div class="timeline" id="timeline">
+          <div class="timeline__item timeline__item--right" data-aos="fade-left">
+            <div class="timeline__date">
+                <!-- Replaced font-awesome code icon with inline SVG for crisper visuals and subtle animation -->
+                <svg class="svg-code-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
+                  <defs>
+                    <linearGradient id="codeGrad" x1="0%" x2="100%">
+                      <stop offset="0%" stop-color="var(--primary)" />
+                      <stop offset="100%" stop-color="var(--accent)" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" stroke="url(#codeGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="svg-code-left" d="M9.5 7.5L4.5 12l5 4.5" />
+                    <path class="svg-code-slash" d="M11 7l2 10" />
+                    <path class="svg-code-right" d="M14.5 7.5L19.5 12l-5 4.5" />
+                  </g>
+                </svg>
+                <time datetime="2023-09">Sep 2023 – Present</time>
+              </div>
+            <div class="timeline__card glass-card">
+              <span class="timeline__badge">Current</span>
+              <h3 class="timeline__title">Software Developer</h3>
+              <p class="timeline__company">Bajaj Life Insurance Company</p>
+              <ul class="timeline__list">
+                <li>Led design and development of scalable microservices using Java 8 and Spring Boot for enterprise insurance applications, improving process efficiency by 25%.</li>
+                <li>Designed and exposed RESTful APIs powering core business workflows, ensuring high availability and consistent performance across production environments.</li>
+                <li>Optimized application performance, logging, and exception handling, cutting API response time by 20%.</li>
+                <li>Diagnosed and resolved critical production issues through root-cause analysis, reducing system downtime by 30%.</li>
+                <li>Built and maintained CI/CD pipelines using Jenkins and GitHub, enabling faster and more reliable deployments in an Agile delivery model.</li>
+                <li>Deployed and managed containerized applications on AWS and Red Hat OpenShift, supporting scalable, resilient infrastructure.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline__item timeline__item--left" data-aos="fade-right">
+            <div class="timeline__date">
+              <i class="fa-brands fa-aws" aria-hidden="true"></i>
+              <time datetime="2023-04/2023-07">Apr 2023 – Jul 2023</time>
+            </div>
+            <div class="timeline__card glass-card">
+              <h3 class="timeline__title">AWS Cloud Intern</h3>
+              <p class="timeline__company">FXIII Technologies Pvt. Ltd.</p>
+              <ul class="timeline__list">
+                <li>Implemented core AWS services (EC2, S3, Lambda) for application deployment and process automation, improving infrastructure scalability and performance by 15%.</li>
+                <li>Reduced cloud costs by 10% while maintaining 99.9% system uptime.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Projects</span>
+          <h2 class="section-title">Enterprise <span class="text-gradient">Solutions</span></h2>
+          <p class="section-subtitle">Production systems delivering measurable business impact</p>
+        </div>
+        <div class="projects__grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Backend Architecture -->
+    <section id="architecture" class="architecture section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Architecture</span>
+          <h2 class="section-title">Backend <span class="text-gradient">Stack</span></h2>
+          <p class="section-subtitle">End-to-end enterprise architecture powering production workloads</p>
+        </div>
+        <div class="architecture__diagram" data-aos="fade-up" data-aos-delay="200">
+          <svg viewBox="0 0 600 520" class="arch-svg" role="img" aria-label="Backend architecture diagram: Angular to Spring Boot to Microservices to Oracle to AWS to OpenShift">
+            <defs>
+              <linearGradient id="gradBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2563EB"/>
+                <stop offset="100%" stop-color="#7C3AED"/>
+              </linearGradient>
+              <linearGradient id="gradCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00E5FF"/>
+                <stop offset="100%" stop-color="#2563EB"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <line x1="300" y1="70" x2="300" y2="110" class="arch-line" stroke-dasharray="6 4"/>
+            <line x1="300" y1="150" x2="300" y2="190" class="arch-line" stroke-dasharray="6 4"/>
+            <line x1="300" y1="230" x2="300" y2="270" class="arch-line" stroke-dasharray="6 4"/>
+            <line x1="300" y1="310" x2="300" y2="350" class="arch-line" stroke-dasharray="6 4"/>
+            <line x1="300" y1="390" x2="300" y2="430" class="arch-line" stroke-dasharray="6 4"/>
+            <g class="arch-node" data-node="0">
+              <rect x="200" y="20" width="200" height="50" rx="12" fill="url(#gradBlue)" filter="url(#glow)"/>
+              <text x="300" y="52" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">Angular</text>
+            </g>
+            <g class="arch-node" data-node="1">
+              <rect x="175" y="110" width="250" height="50" rx="12" fill="url(#gradBlue)" filter="url(#glow)"/>
+              <text x="300" y="142" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">Spring Boot</text>
+            </g>
+            <g class="arch-node" data-node="2">
+              <rect x="160" y="190" width="280" height="50" rx="12" fill="url(#gradBlue)" filter="url(#glow)"/>
+              <text x="300" y="222" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">Microservices</text>
+            </g>
+            <g class="arch-node" data-node="3">
+              <rect x="200" y="270" width="200" height="50" rx="12" fill="url(#gradBlue)" filter="url(#glow)"/>
+              <text x="300" y="302" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">Oracle</text>
+            </g>
+            <g class="arch-node" data-node="4">
+              <rect x="210" y="350" width="180" height="50" rx="12" fill="url(#gradCyan)" filter="url(#glow)"/>
+              <text x="300" y="382" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">AWS</text>
+            </g>
+            <g class="arch-node" data-node="5">
+              <rect x="175" y="430" width="250" height="50" rx="12" fill="url(#gradCyan)" filter="url(#glow)"/>
+              <text x="300" y="462" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">OpenShift</text>
+            </g>
+            <polygon points="295,105 305,105 300,115" fill="#00E5FF" class="arch-arrow"/>
+            <polygon points="295,185 305,185 300,195" fill="#00E5FF" class="arch-arrow"/>
+            <polygon points="295,265 305,265 300,275" fill="#00E5FF" class="arch-arrow"/>
+            <polygon points="295,345 305,345 300,355" fill="#00E5FF" class="arch-arrow"/>
+            <polygon points="295,425 305,425 300,435" fill="#00E5FF" class="arch-arrow"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="achievements section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Impact</span>
+          <h2 class="section-title">Measurable <span class="text-gradient">Results</span></h2>
+        </div>
+        <div class="achievements__grid">
+          <div class="achievement-card" data-aos="zoom-in" data-aos-delay="0">
+            <span class="achievement-card__number" data-count="25" data-suffix="%">0</span>
+            <span class="achievement-card__label">Performance Improvement</span>
+          </div>
+          <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+            <span class="achievement-card__number" data-count="30" data-suffix="%">0</span>
+            <span class="achievement-card__label">Downtime Reduction</span>
+          </div>
+          <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+            <span class="achievement-card__number" data-count="99.9" data-suffix="%" data-decimal="1">0</span>
+            <span class="achievement-card__label">Availability</span>
+          </div>
+          <div class="achievement-card" data-aos="zoom-in" data-aos-delay="300">
+            <span class="achievement-card__number" data-count="25" data-suffix="%">0</span>
+            <span class="achievement-card__label">Query Optimization</span>
+          </div>
+          <div class="achievement-card" data-aos="zoom-in" data-aos-delay="400">
+            <span class="achievement-card__number" data-count="34" data-suffix="%">0</span>
+            <span class="achievement-card__label">Workflow Automation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="education section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Education</span>
+          <h2 class="section-title">Academic <span class="text-gradient">Background</span></h2>
+        </div>
+        <div class="education__card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="education__icon">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+          </div>
+          <div class="education__content">
+            <h3>Bachelor of Engineering, Computer Science</h3>
+            <p class="education__university">Savitribai Phule Pune University</p>
+            <div class="education__meta">
+              <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2019 – 2023</span>
+              <span><i class="fa-solid fa-star" aria-hidden="true"></i> CGPA: 8.15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title">Let's Build <span class="text-gradient">Something Great</span></h2>
+          <p class="section-subtitle">Got a question or proposal? I'd love to hear from you.</p>
+        </div>
+        <div class="contact__pills" data-aos="fade-up" data-aos-delay="100">
+          <a href="mailto:mihir.chaudharii@outlook.com" class="contact-pill glass-card">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>mihir.chaudharii@outlook.com</span>
+          </a>
+          <a href="tel:+917030891636" class="contact-pill glass-card">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <span>+91 7030891636</span>
+          </a>
+          <a href="https://github.com/mihir-31" target="_blank" rel="noopener noreferrer" class="contact-pill glass-card">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>github.com/mihir-31</span>
+          </a>
+          <a href="https://www.linkedin.com/in/mihir-chaudhari-6063b720a/" target="_blank" rel="noopener noreferrer" class="contact-pill glass-card">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="assets/resume.pdf" class="contact-pill glass-card" download>
+            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+            <span>Download Resume</span>
+          </a>
+        </div>
+        <form class="contact__form glass-card" id="contact-form" data-aos="fade-up" data-aos-delay="200" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <span class="footer__logo">Mihir Chaudhari</span>
+        <p class="footer__tagline">Building enterprise software, one microservice at a time.</p>
+      </div>
+      <div class="footer__links">
+        <a href="https://github.com/mihir-31" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mihir-chaudhari-6063b720a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:mihir.chaudharii@outlook.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p class="footer__copy">&copy; <span id="year"></span> Mihir Chaudhari. All rights reserved.</p>
+    </div>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+  </footer>
+
+  <!-- Project Modal -->
+  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__content glass-card">
+      <button class="modal__close" id="modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal__body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
